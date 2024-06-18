@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+/App/node_modules
+/AppCreationScripts/createdApps.html
+/App/prisma/migrations
+/App/prisma/dev.db

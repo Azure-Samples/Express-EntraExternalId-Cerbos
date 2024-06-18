@@ -1,0 +1,42 @@
+<h1>List of posts:</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Published</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each posts}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.content}}</td>
+            <td>{{#if this.published}}
+                <form style="all: unset;" action="/posts/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" value="false" name="published">
+                    <input type="submit" value="Unpublish" />
+                </form>
+                {{else}}
+                <form style="all: unset;" action="/posts/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" value="true" name="published">
+                    <input type="submit" value="Publish" />
+                </form>
+                {{/if}}      
+            </td>
+            <td>
+                <form style="all: unset;" action="/posts/{{this.id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="Delete" />
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<br>
+<br>
+<a href="/">Go back</a>
