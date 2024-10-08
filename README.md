@@ -27,7 +27,10 @@ Before getting started, make sure you have the following prerequisites:
 
 - Docker for running the [Cerbos Policy Decision Point (PDP)](https://docs.cerbos.dev/cerbos/0.6.0/installation/container.html).
 
-- An External ID for customers tenant. If you don't already have one, you can [sign up for a free trial](https://aka.ms/ciam-free-trial?wt.mc_id=ciamcustomertenantfreetrial_linkclick_content_cnl) or [create a tenant with customer configurations in the Microsoft Entra admin center](https://learn.microsoft.com/en-us/entra/external-id/customers/quickstart-tenant-setup).
+- An external tenant. To create one, choose from the following methods:
+    * (Recommended) Use the [Microsoft Entra External ID extension](https://aka.ms/ciamvscode/readme/marketplace) to set up an external tenant directly in Visual Studio Code.
+    * [Create a new external tenant](https://learn.microsoft.com/entra/external-id/customers/how-to-create-external-tenant-portal) in the Microsoft Entra admin center.
+- A user account in your **Microsoft Entra External ID** tenant.
 
 - (Optional) [PowerShell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell) - This guide also provides alternative step-by-step instructions to complete the Microsoft Entra configuration.
 
